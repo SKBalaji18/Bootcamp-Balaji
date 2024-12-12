@@ -1,0 +1,5 @@
+LLM used : claude.ai
+
+solution-1
+chat I queried : explain something about CSS variables and how they useful in web development?
+chat link : https://claude.ai/chat/ade19d55-b569-4d61-86f6-6648b99efc7e

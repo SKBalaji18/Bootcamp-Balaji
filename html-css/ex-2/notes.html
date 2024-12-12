@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Techniques - Notes</title>
+    </head>
+    <body>
+
+        <h1>CSS Techniques Used</h1>
+
+        <h2>CSS Variables</h2>
+        <p>We defined CSS variables for colors, font sizes, and spacing in the <code>variable-n.css</code> file. These variables are referenced throughout the main stylesheet to ensure consistent styling across the webpage.</p>
+
+        <h2>Default Values for Variables</h2>
+        <p>We used the <code>var(--variable-name, default-value)</code> syntax to provide default values for variables when they are not defined elsewhere.</p>
+
+        <h2>Alternate Row Styling</h2>
+        <p>The <code>nth-child</code> selector was used to style alternate rows of a table to improve readability.</p>
+
+        <h2>Dynamic Theme Switcher</h2>
+        <p>The dynamic theme switcher uses CSS variables for the background, text color, and primary/secondary colors. JavaScript is used to toggle between light and dark modes by modifying the <code>data-theme</code> attribute on the HTML element.</p>
+
+        <h2>Challenges</h2>
+        <ul>
+            <li>Ensuring that CSS variables were properly applied throughout the stylesheet.</li>
+            <li>Debugging the theme switcher functionality to ensure it correctly toggles the theme.</li>
+        </ul>
+
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Notes</title>
+</head>
+<body>
+    <h1>CSS Grid Layout Notes</h1>
+
+    <p>The layout for this design uses CSS Grid to create a flexible structure with specific areas for a header, two sidebars, main content, and a footer. The key techniques used are:</p>
+    
+    <h2>Key Techniques:</h2>
+    <ul>
+        <li><strong>Grid Template Areas:</strong> Used to define distinct regions such as "header", "sidebar-left", "main", etc.</li>
+        <li><strong>minmax():</strong> This function is used in the grid columns to allow flexible sizing, ensuring columns can shrink and expand between a minimum and maximum width.</li>
+        <li><strong>Media Queries:</strong> These allow us to modify the layout for smaller screens. On mobile, the layout is stacked vertically for better readability and usability.</li>
+        <li><strong>Overflow Handling:</strong> In the main content area, content that exceeds the available height is allowed to overflow with a scrollbar, using `overflow: auto`.</li>
+    </ul>
+
+    <h2>Mobile Layout Adjustments:</h2>
+    <p>The layout is adjusted using a media query for screens smaller than 768px wide. In these cases, the grid switches to a single-column layout with the sidebar and main content stacked vertically. The sidebars are placed after the main content.</p>
+</body>
+</html>
