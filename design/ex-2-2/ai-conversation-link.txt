@@ -1,5 +1,5 @@
 solution 2-2
-LLM used: Chat Gpt
+LLM Used: chatgpt
 
 https://chatgpt.com/c/675e6450-e36c-8013-b7f7-61833a6c86d0 
 
