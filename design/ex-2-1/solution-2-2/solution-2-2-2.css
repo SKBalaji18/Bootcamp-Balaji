@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: "wght" 400, "wdth" 100, "slnt" 0;
+    line-height: 1.6;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+h2 ,h3{
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    width: 85%;
+}
+
+
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+code {
+    font-family: 'Courier Prime', monospace;
+    background-color: #f1f1f1;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border-left: 3px solid red;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition: 0s;
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Roboto Flex';
+    src: url('https://fonts.gstatic.com/s/robotoflex/v8/o6P8KzTQl4FOeo9fcyNLg8Y-ETKpe9z-TpNf-pJOcGE.woff2') format('woff2');
+    font-weight: 100 900; /* Full weight range */
+    font-stretch: 50% 200%; /* Full width range */
+    font-style: oblique -10deg 0deg; /* Full slant range */
+}
+
+body {
+    font-family: sans-serif;
+    margin: 2rem;
+    line-height: 1.6;
+}
+
+.passage {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.passage.one {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 300, 'wdth' 150, 'slnt' 0; /* Lightweight, expanded */
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.passage.two {
+    font-family: 'Roboto Flex', sans-serif;
+    font-variation-settings: 'wght' 800, 'wdth' 75, 'slnt' -5; /* Bold, condensed, slanted */
+    background-color: #f1f1f1;
+    color: #111;
+}
+
+.participation{
+    font-weight: 300;
+    font-variation-settings: "wght" 300, "wdth" 100, "slnt" -5;
+}
+
+.warning{
+    font-weight: 700;
+    font-variation-settings: "wght" 700, "wdth" 100, "slnt" 0;
+}
+
+.preamble {
+    font-weight: 500;
+    font-variation-settings: "wght" 500, "wdth" 100, "slnt" 0;
+    font-variation-settings: "slnt" 10;
+}

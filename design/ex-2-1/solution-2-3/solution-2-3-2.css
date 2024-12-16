@@ -1,0 +1,71 @@
+/* Import fonts using @font-face if hosted locally */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('fonts/Montserrat-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling headers with Montserrat */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    line-height: 1.2; /* Adjust line spacing */
+    color: #333;
+}
+
+li{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+}
+
+/* Styling body text with Roboto */
+body, p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular weight */
+    line-height: 1.6; /* Comfortable line spacing */
+    color: #555;
+}
+
+.page-wrapper{
+    width: 80%;
+    align-self: center;
+}
+
+
+section{
+    background-color: #e4e0e0;
+    padding: 15px;
+}
+
+.warning{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold for emphasis */
+    line-height: 1.2; /* Adjust line spacing */
+    color: #333;
+}
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}

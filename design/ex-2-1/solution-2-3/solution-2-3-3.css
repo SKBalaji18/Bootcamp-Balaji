@@ -1,0 +1,74 @@
+/* Header Typography */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem; /* Large, impactful font size */
+    line-height: 1.3;  /* Line spacing */
+    letter-spacing: 0.05em; /* Slightly increase letter spacing */
+    color: #333;
+    margin-bottom: 20px; /* Add space below */
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.3;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Body Text Typography */
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1rem; /* Base font size */
+    line-height: 1.8; /* Comfortable line height for reading */
+    letter-spacing: 0.02em; /* Improve text clarity */
+    color: #555;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9; /* Light background for readability */
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px; /* Space between paragraphs */
+}
+
+/* Container Styling */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Highlight or Emphasize Important Text */
+.highlight {
+    font-weight: 700;
+    color: #e63946;
+}
+
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}

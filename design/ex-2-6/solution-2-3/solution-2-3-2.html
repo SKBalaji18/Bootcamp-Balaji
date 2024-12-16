@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Railways - Book Your Journey</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="solution-2-3-2.css">
+</head>
+<body>
+    <!-- Existing Navbar from previous design -->
+    <nav class="navbar">
+        <div class="navbar-logo">
+            <img src="https://res.cloudinary.com/dynsxgrtl/image/upload/v1734321690/slpf1o0btfyswj81u63o.png" alt="Indian Railways Logo" class="rail-logo">
+            <h1>Indian Railways</h1>
+        </div>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">Book Ticket</a>
+            <a href="#">Check PNR</a>
+            <a href="#">Train Schedule</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Discover India Through Railways</h1>
+            <p>Connecting millions, delivering comfort, and creating memories across the nation</p>
+            <a href="#booking" class="hero-cta">Book Your Journey</a>
+        </div>
+    </section>
+
+    <!-- Existing Booking Container from previous design -->
+    <div id="booking" class="booking-container">
+        <div class="booking-header">
+            <h1>Book Your Train Ticket</h1>
+            <div class="booking-tabs">
+                <button class="active">One Way</button>
+                <button>Round Trip</button>
+            </div>
+        </div>
+
+        <form class="booking-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label>From</label>
+                    <input type="text" placeholder="Departure Station" list="stations">
+                    <datalist id="stations">
+                        <option value="New Delhi">New Delhi</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Chennai">Chennai</option>
+                    </datalist>
+                </div>
+                <div class="form-group">
+                    <label>To</label>
+                    <input type="text" placeholder="Arrival Station" list="stations">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group date-group">
+                    <label>Date of Journey</label>
+                    <input type="date">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="form-group">
+                    <label>Passengers</label>
+                    <select>
+                        <option>1 Passenger</option>
+                        <option>2 Passengers</option>
+                        <option>3 Passengers</option>
+                        <option>4 Passengers</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label>Class</label>
+                    <select>
+                        <option>AC First Class (1A)</option>
+                        <option>AC 2 Tier (2A)</option>
+                        <option>AC 3 Tier (3A)</option>
+                        <option>Sleeper (SL)</option>
+                        <option>General (GN)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Quota</label>
+                    <select>
+                        <option>General</option>
+                        <option>Ladies</option>
+                        <option>Senior Citizen</option>
+                        <option>Tatkal</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="booking-button">Search Trains</button>
+        </form>
+    </div>
+
+    <!-- Popular Train Routes -->
+    <section class="popular-routes">
+        <div class="routes-container">
+            <h2 style="text-align: center; margin-bottom: 30px; color: var(--secondary-blue);">Popular Train Routes</h2>
+            <div class="routes-grid">
+                <div class="route-card">
+                    <div class="route-card-content">
+                        <h3>Mumbai - Delhi Express</h3>
+                        <p>Fastest connectivity between two major metros</p>
+                        <div class="route-details">
+                            <span>Distance: 1,384 km</span>
+                            <span>Duration: 16 hrs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-card-content">
+                        <h3>Chennai - Bangalore Superfast</h3>
+                        <p>Connecting tech hubs of South India</p>
+                        <div class="route-details">
+                            <span>Distance: 346 km</span>
+                            <span>Duration: 5 hrs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-card-content">
+                        <h3>Kolkata - Delhi Rajdhani</h3>
+                        <p>Premium express connecting eastern and northern India</p>
+                        <div class="route-details">
+                            <span>Distance: 1,654 km</span>
+                            <span>Duration: 17 hrs</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="route-card">
+                    <div class="route-card-content">
+                        <h3>Hyderabad - Pune Expressway</h3>
+                        <p>Connecting two major economic centers</p>
+                        <div class="route-details">
+                            <span>Distance: 624 km</span>
+                            <span>Duration: 9 hrs</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title" style="text-align: center; margin-bottom: 30px; color: var(--secondary-blue);">Why Choose Us</h2>
+            <div class="choose-grid">
+                <div class="choose-card">
+                    <div class="choose-icon">🎫</div>
+                    <h3>Easy Booking</h3>
+                    <p>Simple and intuitive booking process</p>
+                </div>
+                <div class="choose-card">
+                    <div class="choose-icon">🔒</div>
+                    <h3>Secure Payments</h3>
+                    <p>100% secure payment gateway</p>
+                </div>
+                <div class="choose-card">
+                    <div class="choose-icon">🚉</div>
+                    <h3>Wide Network</h3>
+                    <p>Connecting major cities across India</p>
+                </div>
+                <div class="choose-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Punctual Services</h3>
+                    <p>Reliable and timely train services across routes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Carousel -->
+    <section class="destinations">
+        <h2 style="text-align: center; margin-bottom: 30px; color: var(--secondary-blue);">Popular Destinations</h2>
+        <div class="destinations-carousel">
+            <div class="destination-card">
+                <img src="https://res.cloudinary.com/dynsxgrtl/image/upload/v1734321800/eylzpatnppp1pkujwmo2.png" alt="Destination">
+                <div class="destination-card-content">
+                    <h3>Jaipur</h3>
+                    <p>The Pink City of Rajasthan</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://res.cloudinary.com/dynsxgrtl/image/upload/v1734321890/m2ml0sgiflysv4lgotu8.png" alt="Destination">
+                <div class="destination-card-content">
+                    <h3>Goa</h3>
+                    <p>Beaches and Portuguese Heritage</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://res.cloudinary.com/dynsxgrtl/image/upload/v1734321848/muogllatyyixz1yu4r4n.png" alt="Destination">
+                <div class="destination-card-content">
+                    <h3>Kerala</h3>
+                    <p>God's Own Country</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://res.cloudinary.com/dynsxgrtl/image/upload/v1734321930/wv4uh8parzcdjqiatudm.png" alt="Destination">
+                <div class="destination-card-content">
+                    <h3>Darjeeling</h3>
+                    <p>Himalayan Mountain Retreat</p>
+                </div>
+            </div>
+            <div class="destination-card">
+                <img src="https://res.cloudinary.com/dynsxgrtl/image/upload/v1734321966/blutwcsi64bjzisqjilu.png" alt="Destination">
+                <div class="destination-card-content">
+                    <h3>Varanasi</h3>
+                    <p>Spiritual Capital of India</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Previous Quick Links section from previous design -->
+    <div class="quick-links">
+        <a href="#" class="quick-link">
+            <i class="fas fa-ticket-alt"></i>
+            <span>PNR Status</span>
+        </a>
+        <a href="#" class="quick-link">
+            <i class="fas fa-train"></i>
+            <span>Train Schedule</span>
+        </a>
+        <a href="#" class="quick-link">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Live Train Status</span>
+        </a>
+        <a href="#" class="quick-link">
+            <i class="fas fa-user-friends"></i>
+            <span>Passenger Services</span>
+        </a>
+    </div>
+</body>
+</html>

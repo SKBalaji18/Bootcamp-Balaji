@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Contrast Accessibility Demo</title>
+    <link rel="stylesheet" href="solution-2-3-3.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Color Contrast Accessibility Demo</h1>
+        
+        <div class="color-grid">
+            <div class="color-block" style="background-color: #FFFFFF; color: #000000;">
+                <div class="status-icon pass">✓</div>
+                <div>
+                    <h3>High Contrast (Passes WCAG AA)</h3>
+                    <p>Background: #FFFFFF (White)</p>
+                    <p>Text Color: #000000 (Black)</p>
+                </div>
+            </div>
+
+            <div class="color-block" style="background-color: #1E90FF; color: #FFFFFF;">
+                <div class="status-icon pass">✓</div>
+                <div>
+                    <h3>Blue on White (Passes WCAG AA)</h3>
+                    <p>Background: #1E90FF (Dodger Blue)</p>
+                    <p>Text Color: #FFFFFF (White)</p>
+                </div>
+            </div>
+
+            <div class="color-block" style="background-color: #4A4A4A; color: #FFFFFF;">
+                <div class="status-icon pass">✓</div>
+                <div>
+                    <h3>Dark Gray on White (Passes WCAG AA)</h3>
+                    <p>Background: #4A4A4A (Dark Gray)</p>
+                    <p>Text Color: #FFFFFF (White)</p>
+                </div>
+            </div>
+
+            <div class="color-block" style="background-color: #8B0000; color: #FFA500;">
+                <div class="status-icon fail">✗</div>
+                <div>
+                    <h3>Low Contrast (Fails WCAG AA)</h3>
+                    <p>Background: #8B0000 (Dark Red)</p>
+                    <p>Text Color: #FFA500 (Orange)</p>
+                </div>
+            </div>
+
+            <div class="color-block" style="background-color: #F0F0F0; color: #A9A9A9;">
+                <div class="status-icon fail">✗</div>
+                <div>
+                    <h3>Low Contrast Gray (Fails WCAG AA)</h3>
+                    <p>Background: #F0F0F0 (Light Gray)</p>
+                    <p>Text Color: #A9A9A9 (Dark Gray)</p>
+                </div>
+            </div>
+
+            <div class="color-block" style="background-color: #FFFF00; color: #000000;">
+                <div class="status-icon pass">✓</div>
+                <div>
+                    <h3>Yellow on Black (Passes WCAG AA)</h3>
+                    <p>Background: #FFFF00 (Yellow)</p>
+                    <p>Text Color: #000000 (Black)</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="guidelines">
+            <h2>Accessibility Guidelines</h2>
+            <ul>
+                <li>WCAG 2.0 Level AA requires a minimum contrast ratio of 4.5:1 for normal text</li>
+                <li>Large text (14pt and bold or 18pt and regular) requires a minimum contrast ratio of 3:1</li>
+                <li>Use color contrast checker tools to verify accessibility</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

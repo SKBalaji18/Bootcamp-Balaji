@@ -1,0 +1,21 @@
+solution-2-2-1:
+LLM Used: claude.ai
+asked for the google fonts cdn
+
+https://claude.ai/chat/22c06bba-7a5a-4198-8475-bdb8d042053b 
+
+solution-2-2-2
+LLM used : chatgpt
+
+https://chatgpt.com/c/675da399-8f04-8013-8f71-33bcf481f8c7
+
+solution-2-2-3
+LLM Used: claude.ai
+asked about the Drop cap,text shadow
+
+https://claude.ai/chat/e0a07ede-f054-4510-b309-b0a6c89f44e4
+
+solution2-3
+LLM used : chatgpt
+
+https://chatgpt.com/c/675dba85-1614-8013-8987-6be49d2a1154

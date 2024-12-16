@@ -1,0 +1,243 @@
+/* Dark Theme Variables */
+:root  {
+    --background-color: #1e1e1e; /* Dark grey background */
+    --text-color: #eaeaea; /* Light text */
+    --header-bg: #2c3e50; /* Dark blue-grey header */
+    --header-text: #ecf0f1; /* Light header text */
+    --header-accent: #f39c12; /* Bright yellow accent for header */
+    --button-bg: #e67e22; /* Vibrant orange button */
+    --button-hover-bg: #cf6f1d; /* Darker orange */
+    --card-bg: #2c3e50; /* Card background */
+    --card-text: white;
+    --card-accent: #f39c12; /* Bright yellow for cards */
+    --footer-bg: #2c3e50; /* Footer background */
+    --footer-text: #ecf0f1; /* Footer text */
+    --link-color: #f39c12; /* Yellow for links */
+    --link-hover-color: #3498db; /* Blue for hovered links */
+    --scrollbar-thumb: #f39c12; /* Yellow scrollbar thumb */
+    --scrollbar-track: #34495e; /* Dark scrollbar track */
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 20px;
+    text-align: center;
+}
+
+header h1, header h2 {
+    margin: 0;
+    font-size: 2.5rem;
+    color: var(--header-accent);
+}
+
+/* Ordered List */
+ol {
+    line-height: 1.5;
+    padding-left: 60px;
+    margin: 10px;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Main Section */
+.main {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: center;
+    width: 75%;
+}
+
+.intro {
+    align-self: center;
+    width: 75%;
+}
+
+/* Buttons */
+.button, .cta-button {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    margin: 10px 0;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.button:hover, .cta-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* Section Cards */
+.card {
+    background-color: var(--card-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 35%;
+    height: 320px;
+    flex-grow: 1;
+    margin: 7px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h2, .card h3 {
+    color: var(--card-text);
+    font-size: 26px;
+    margin: 5px;
+    border-bottom: 2px solid var(--card-accent);
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+.card-content {
+    color: var(--card-text);
+    max-height: 270px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.card-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-content::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    border-radius: 4px;
+    border: 2px solid var(--scrollbar-track);
+}
+
+.card-content::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Links */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Footer */
+footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+}
+
+footer a {
+    color: var(--footer-text);
+}
+
+footer a:hover {
+    color: var(--link-color);
+}
+
+.cta-button a{
+    color: white;
+}
+
+.toggle-btn{
+    align-self: flex-end;
+    margin: 20px;
+    background-color: transparent;
+    border:2px solid var(--button-bg);
+    border-radius: 25px;
+    color: var(--button-bg);
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    width: 70%;
+    margin: 20px auto;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--overlay-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-text {
+    color: var(--overlay-text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+}

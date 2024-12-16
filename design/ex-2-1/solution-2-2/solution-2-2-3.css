@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+        
+
+
+body {
+    margin: 0;
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-family: 'monospace';
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 50px;
+    font-size: 2.5rem;
+    color: #333;
+    font-family: 'Merriweather', serif;
+}
+
+h2 ,h3{
+    font-size: 2rem;
+    color: #666;
+    margin-bottom: 30px;
+    font-family: 'Merriweather', serif;
+}
+
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    width: 85%;
+    font-family: 'Roboto','sans-serif';
+}
+
+.normal-weight{
+    font-weight: 400;
+}
+
+.light-weight{
+    font-weight: 100;
+}
+
+.bold-weight{
+    font-weight: 700;
+}
+
+.variable-weights h2,h3{
+    font-size: 26px;
+}
+
+
+li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+    font-family: 'Times New Roman';
+}
+
+code {
+    font-family: 'Courier Prime', monospace;
+    background-color: #f1f1f1;
+    padding: 5px 8px;
+    border-radius: 4px;
+    border-left: 3px solid red;
+}
+
+a{
+    text-decoration: none;
+    color: green;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition: 0s;
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 75%;
+    align-self: center;
+}
+
+/* Drop Cap Styling */
+.drop-cap::first-letter {
+    float: left;
+    font-size: 4em;
+    font-weight: bold;
+    margin-right: 10px;
+    color: #333;
+    line-height: 0.8;
+}
+
+/* Text Shadow Styling */
+.text-shadow {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    text-shadow: 
+        3px 3px 6px rgba(0,0,0,0.3),
+        -3px -3px 6px rgba(255,255,255,0.7);
+    color: #2c3e50;
+}
+
+/* Image Text Fill */
+.image-text-fill {
+    font-size: 5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: url('https://res.cloudinary.com/dynsxgrtl/image/upload/v1733987180/jnkon3xxytjrdds3kqmm.png');
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}

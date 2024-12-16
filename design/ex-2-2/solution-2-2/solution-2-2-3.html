@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Spectrum Exploration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="solution-2-2-3.css">
+
+</head>
+<body>
+    <section id="color-swatch">
+        <div class="swatch-container">
+            <h2>Color Swatch Generator</h2>
+            <p>
+                Below is a grid of color swatches generated using variations of HSL values.
+            </p>
+            <div id="swatch-grid"></div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        const swatchGrid = document.getElementById("swatch-grid");
+
+        // Generate a grid of HSL variations
+        const generateSwatches = () => {
+            const hues = [0, 60, 120, 180, 240, 300]; // Basic hues
+            const saturations = [50, 70, 90]; // Variations in saturation
+            const lightnesses = [40, 60, 80]; // Variations in lightness
+
+            // Clear existing swatches
+            swatchGrid.innerHTML = "";
+
+            hues.forEach((hue) => {
+                saturations.forEach((saturation) => {
+                    lightnesses.forEach((lightness) => {
+                        // Generate the HSL color
+                        const hslValue = `hsl(${hue}, ${saturation}%, ${lightness}%)`;
+
+                        // Create swatch element
+                        const swatchItem = document.createElement("div");
+                        swatchItem.classList.add("swatch-item");
+                        swatchItem.style.backgroundColor = hslValue;
+                        swatchItem.textContent = hslValue;
+
+                        // Add swatch to grid
+                        swatchGrid.appendChild(swatchItem);
+                    });
+                });
+            });
+        };
+
+        // Generate swatches on page load
+        generateSwatches();
+    });
+    </script>
+</body>
+</html>

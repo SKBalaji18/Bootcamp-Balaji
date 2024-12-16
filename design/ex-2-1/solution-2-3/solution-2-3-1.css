@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-2-1/font/Geist-Regular.woff2') format('woff2'),
+         url('/font/geist-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-2-1/font/Geist-Bold.woff2') format('woff2'),
+         url('/font/geist-bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-2-1/font/Geist-Italic.woff2') format('woff2'),
+         url('/font/geist-italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Geist';
+    src: url('../ex-2-1/font/Geist-Light.woff2') format('woff2'),
+         url('/font/geist-light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Geist', sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'Geist', sans-serif;
+    font-weight: normal;
+    color: #000076;
+}
+
+h2 ,h3{
+    font-family: 'Geist', sans-serif;
+    font-weight: bold;
+    color: #000076;
+}
+
+p {
+    font-family: 'Geist', sans-serif;
+    font-style: italic;
+}
+
+section p {
+    font-family: 'Geist', sans-serif;
+    font-weight: lighter;
+    font-style: normal;
+}
+
+.page-wrapper{
+    width: 80%;
+    align-self: center;
+}
+
+section{
+    background-color: #e4e0e0;
+    padding: 15px;
+}
+
+
+a{
+    color: green;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}

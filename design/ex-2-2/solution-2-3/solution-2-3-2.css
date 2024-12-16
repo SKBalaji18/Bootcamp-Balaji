@@ -1,0 +1,106 @@
+:root {
+    /* Base Colors */
+    --primary: #3498db;
+    --secondary: #2ecc71;
+
+    /* Lighten and Darken Variants */
+    --primary-light: #5dade2;
+    --primary-dark: #2c81ba;
+    --secondary-light: #58d68d;
+    --secondary-dark: #27ae60;
+}
+
+/* Small Screen Palette */
+@media (max-width: 600px) {
+:root {
+    --primary: #9b59b6;
+    --primary-light: #af7ac5;
+    --primary-dark: #884ea0;
+    --secondary: #f1c40f;
+    --secondary-light: #f7dc6f;
+    --secondary-dark: #d4ac0d;
+}
+}
+
+/* Medium Screen Palette */
+@media (min-width: 601px) and (max-width: 1024px) {
+:root {
+    --primary: #e74c3c;
+    --primary-light: #ec7063;
+    --primary-dark: #c0392b;
+    --secondary: #1abc9c;
+    --secondary-light: #48c9b0;
+    --secondary-dark: #16a085;
+}
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 2rem;
+    text-align: center;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+}
+
+h1 {
+    color: var(--primary);
+}
+
+h2 {
+    color: var(--secondary);
+}
+
+button {
+    background: var(--secondary);
+    border: none;
+    border-radius: 25px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--secondary-dark);
+}
+
+.color-demo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.color-box {
+    padding: 2rem;
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.color-box.primary {
+    background-color: var(--primary);
+}
+
+.color-box.primary-light {
+    background-color: var(--primary-light);
+}
+
+.color-box.primary-dark {
+    background-color: var(--primary-dark);
+}
+
+.color-box.secondary {
+    background-color: var(--secondary);
+}
+
+.color-box.secondary-light {
+    background-color: var(--secondary-light);
+}
+
+.color-box.secondary-dark {
+    background-color: var(--secondary-dark);
+}

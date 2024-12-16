@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffe5ec; /* Light base color */
+    color: #fb6a95; /*Text color using the base color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.page-wrapper{
+    align-self: center;
+    width: 75%;
+}
+
+ol{
+    line-height: 1.5;
+    padding-left: 60px;
+    margin: 10px;
+}
+
+.card {
+    background-color: #ffc2d1; /* Card background */
+    border: 2px solid #ffb3c6; /* Subtle border with alpha */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #ff8fab; /* Soft shadow with alpha */
+    padding: 20px;
+    width: 35%;
+    height: 320px;
+    flex-grow: 1;
+    margin: 7px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.card-content {
+    color: #fb6a95;
+    max-height: 270px;
+    overflow-y: auto;
+    margin-bottom: 15px;
+    padding: 0px;
+    /* Webkit (Chrome, Safari) Scrollbar Styling */
+    scrollbar-width: thin;
+    scrollbar-color: #fb6a95 #e6f2ff;
+}
+
+/* Webkit (Chrome, Safari) Scrollbar Track */
+.card-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Webkit Scrollbar Handle */
+.card-content::-webkit-scrollbar-thumb {
+    background-color: #fb6a95;
+    border-radius: 4px;
+    border: 2px solid #e6f2ff;
+}
+
+/* Webkit Scrollbar Track */
+.card-content::-webkit-scrollbar-track {
+    background-color: #e6f2ff;
+}
+
+/* Firefox Scrollbar Styling */
+.card-content {
+    scrollbar-width: thin;
+    scrollbar-color: #fb6a95 #e6f2ff;
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (max-width:767px) {
+    .card{
+        width: 90%;
+        align-self:center;
+    }
+}
+
+a{
+    color: #ff8fab;
+    text-decoration: underline;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+footer a{
+    color: #ffe5ec;
+}
+
+header,footer{
+    font-family: 'Roboto', serif;
+    background-color: #fb6a95;
+    background-attachment: fixed;
+    padding:10px 20px;
+    color: #ffc2d1;
+}
+
+p{
+    line-height: 1.5;
+}

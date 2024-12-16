@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-card {
+            width: 350px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .contact-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .contact-header {
+            margin-bottom: 20px;
+        }
+
+        .contact-header h2 {
+            margin: 10px 0;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .contact-header p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        .contact-icons {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #f0f0f0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .contact-icon i {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .contact-icon.instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: white;
+        }
+
+        .contact-icon.twitter {
+            background-color: #1DA1F2;
+            color: white;
+        }
+
+        .contact-icon.mail {
+            background-color: #EA4335;
+            color: white;
+        }
+
+        .contact-icon.phone {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .contact-icon.location {
+            background-color: #FF9800;
+            color: white;
+        }
+
+        .contact-icon:hover {
+            transform: scale(1.1) rotate(360deg);
+        }
+
+        .contact-details {
+            text-align: left;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .contact-details p {
+            margin: 8px 0;
+            color: #555;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-details p i {
+            margin-right: 10px;
+            color: #666;
+        }
