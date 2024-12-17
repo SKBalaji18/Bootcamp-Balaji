@@ -1,0 +1,7 @@
+logging:
+  level: error
+
+commands:
+  - name: calculate-sin
+    function: sin
+    file: mathFunctions.js

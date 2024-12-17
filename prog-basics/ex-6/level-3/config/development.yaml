@@ -1,0 +1,11 @@
+logging:
+  level: debug
+
+commands:
+  - name: calculate-sin
+    function: sin
+    file: mathFunctions.js
+
+  - name: calculate-cos
+    function: cos
+    file: mathFunctions.js

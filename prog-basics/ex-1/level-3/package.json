@@ -1,0 +1,16 @@
+{
+  "name": "level-3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "shx test -d node_modules || npm install",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "shx": "^0.3.4"
+  }
+}
