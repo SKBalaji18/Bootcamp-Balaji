@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structured Logging with Winston</title>
+    <link rel="stylesheet" href="https://classless.de/classless.css">
+</head>
+<body>
+    <h1>Documentation: Structured Logging with Winston</h1>
+
+    <h2>Level 1</h2>
+    <h3>Thought Process</h3>
+    <p>At this level, the objective was to set up the <code>winston</code> logging library to handle logs with different levels such as <code>info</code>, <code>warn</code>, and <code>error</code>. The focus was on logging specific events like "Program started" and "Operation successful". Additionally, I implemented a function for division where division by zero was logged as a fatal error. As I was not very familiar with <code>winston</code>, I researched the library and learned its basic usage through <code>claude.ai</code>. This learning process helped me understand how to configure log levels and write structured logs effectively.</p>
+    <h3>Challenges</h3>
+    <p>The main challenge was a lack of initial familiarity with <code>winston</code>. This required some time to understand its setup and functionality, such as creating custom log levels and using different logging methods.</p>
+    <h3>LLM Usage</h3>
+    <p>Yes, I used <code>claude.ai</code> to learn and implement structured logging with <code>winston</code>. The AI provided examples and clarified concepts, which helped me complete this level.</p>
+    <a href="https://claude.ai/chat/f97de1da-32fa-460d-b287-db16b6f12cc9">Here is the conversation</a>
+    <h2>Level 2</h2>
+    <h3>Thought Process</h3>
+    <p>In this level, I extended the functionality of the logger to include file transport, enabling logs to be written to a file. I also customized the log format to include timestamps for better traceability. The implementation was straightforward because I already had a basic understanding of <code>winston</code> from the previous level. Adding file transport involved specifying the output file in the logger configuration, while formatting with timestamps required using <code>winston.format.combine</code> and <code>winston.format.timestamp</code>. This level reinforced my understanding of <code>winston</code> and its features.</p>
+    <h3>Challenges</h3>
+    <p>No challenges were faced during this level, as the knowledge gained from the first level provided a solid foundation.</p>
+    <h3>LLM Usage</h3>
+    <p>No language model was used to complete this level, as I relied on the understanding acquired in Level 1.</p>
+
+</body>
+</html>
