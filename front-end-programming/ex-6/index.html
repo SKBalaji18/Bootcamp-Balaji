@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Exploration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    #controls {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+    #controls label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    #controls input[type="color"], 
+    #controls input[type="range"], 
+    #controls input[type="number"] {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    #samplePage {
+      flex-grow: 1;
+      padding: 20px;
+      width: 600px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    #samplePage h1, #samplePage h2, #samplePage p, #samplePage table {
+      margin-bottom: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+<div id="controls">
+  <h2>Color Selection</h2>
+  
+  <label for="colorPicker">Choose a Base Color:</label>
+  <input type="color" id="colorPicker" value="#3498db">
+
+  <label for="hue">Hue:</label>
+  <input type="range" id="hue" min="0" max="360" value="200">
+  
+  <label for="saturation">Saturation:</label>
+  <input type="range" id="saturation" min="0" max="100" value="60">
+  
+  <label for="lightness">Lightness:</label>
+  <input type="range" id="lightness" min="0" max="100" value="60">
+
+  <label for="opacity">Opacity:</label>
+  <input type="range" id="opacity" min="0" max="1" step="0.01" value="1">
+</div>
+
+<div id="samplePage">
+  <h1>Sample Header 1</h1>
+  <h2>Sample Header 2</h2>
+  <p>Sample paragraph content. This text will change color according to your selections.</p>
+  
+  <button>Sample Button</button>
+  
+  <h3>Sample Table</h3>
+  <table>
+    <tr>
+      <th>Header 1</th>
+      <th>Header 2</th>
+    </tr>
+    <tr>
+      <td>Row 1, Cell 1</td>
+      <td>Row 1, Cell 2</td>
+    </tr>
+    <tr>
+      <td>Row 2, Cell 1</td>
+      <td>Row 2, Cell 2</td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  const colorPicker = document.getElementById("colorPicker");
+  const hue = document.getElementById("hue");
+  const saturation = document.getElementById("saturation");
+  const lightness = document.getElementById("lightness");
+  const opacity = document.getElementById("opacity");
+
+  const samplePage = document.getElementById("samplePage");
+
+  function updateColors() {
+    const baseColor = colorPicker.value;
+    const h = hue.value;
+    const s = saturation.value;
+    const l = lightness.value;
+    const o = opacity.value;
+
+    const hslColor = `hsl(${h}, ${s}%, ${l}%)`;
+    const rgbaColor = `rgba(${hexToRgb(baseColor)}, ${o})`;
+
+    // Update colors for different elements in the sample page
+    samplePage.style.backgroundColor = hslColor; 
+    samplePage.querySelector("h1").style.color = rgbaColor;
+    samplePage.querySelector("h2").style.color = rgbaColor; 
+    samplePage.querySelector("p").style.color = rgbaColor;  
+    samplePage.querySelector("button").style.backgroundColor = rgbaColor;
+    samplePage.querySelector("table").style.borderColor = rgbaColor;
+  }
+
+  // Helper function to convert hex to RGB
+  function hexToRgb(hex) {
+    let r = 0, g = 0, b = 0;
+    if (hex.length === 4) {
+      r = parseInt(hex[1] + hex[1], 16);
+      g = parseInt(hex[2] + hex[2], 16);
+      b = parseInt(hex[3] + hex[3], 16);
+    } else if (hex.length === 7) {
+      r = parseInt(hex[1] + hex[2], 16);
+      g = parseInt(hex[3] + hex[4], 16);
+      b = parseInt(hex[5] + hex[6], 16);
+    }
+    return `${r}, ${g}, ${b}`;
+  }
+
+  // Event listeners for real-time updates
+  colorPicker.addEventListener("input", updateColors);
+  hue.addEventListener("input", updateColors);
+  saturation.addEventListener("input", updateColors);
+  lightness.addEventListener("input", updateColors);
+  opacity.addEventListener("input", updateColors);
+
+  // Initial color update
+  updateColors();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript App</title>
+  <style>
+    table {
+        width: 100%;
+        border-collapse: collapse; /* Removes spacing between table cells */
+        margin: 20px 0; /* Adds spacing around the table */
+        font-size: 16px;
+        font-family: Arial, sans-serif;
+        text-align: left; /* Aligns text to the left */
+    }
+
+    /* Table header styling */
+    thead th {
+        background-color: #f4f4f4; /* Light gray background */
+        color: #333; /* Darker text color */
+        font-weight: bold;
+        padding: 10px; /* Adds space inside header cells */
+        cursor: pointer; /* Pointer cursor for clickable headers (for sorting) */
+    }
+
+    /* Table body rows */
+    tbody tr {
+        border-bottom: 1px solid #ddd; /* Adds a light gray border between rows */
+    }
+
+    /* Alternate row colors */
+    tbody tr:nth-child(odd) {
+        background-color: #f9f9f9; /* Light gray for odd rows */
+    }
+
+    /* Hover effect on rows */
+    tbody tr:hover {
+        background-color: #f1f1f1; /* Slightly darker gray on hover */
+    }
+
+    /* Table data cell styling */
+    td {
+        padding: 10px; /* Adds space inside data cells */
+    }
+
+    /* Highlighted rows (for filtering) */
+    tr.highlight {
+        background-color: #ffe58a !important; /* Yellow for highlights */
+    }
+
+    /* Input box for filtering */
+    input {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+  </style>
+</head>
+<body>
+    <div id="app"></div>
+  <script type="module" src="/main.ts"></script>
+</body>
+</html>

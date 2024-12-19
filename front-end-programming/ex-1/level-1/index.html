@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #4CAF50;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      background-color: #fff;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+    .highlight {
+      background-color: #d1ffd1;
+      color: #000;
+      border: 2px solid #4CAF50;
+    }
+    #browser-info {
+      margin-top: 20px;
+      font-size: 14px;
+      padding: 10px;
+      background: #eef;
+      border-radius: 5px;
+    }
+    button {
+      margin: 5px;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s, background-color 0.2s;
+    }
+    button:hover {
+      transform: translateY(-2px);
+    }
+    button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    #add-student-btn {
+      background-color: #f19f2df6;
+    }
+    #add-student-btn:hover {
+      background-color: #ea951ef6;
+    }
+    #change-font-btn {
+      background-color: #2196F3;
+    }
+    #change-font-btn:hover {
+      background-color: #1976D2;
+    }
+  </style>
+</head>
+<body>
+  <h1>Student Management Dashboard</h1>
+  
+  <div style="text-align: center;">
+    <button id="add-student-btn">Add Student</button>
+    <button id="change-font-btn">Change Table Font</button>
+  </div>
+  
+  <table id="student-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Grade</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+  <div id="browser-info"></div>
+
+  <script>
+    // Add Student Button Functionality
+    const addStudentBtn = document.getElementById('add-student-btn');
+    const studentTable = document.getElementById('student-table').querySelector('tbody');
+
+    let studentId = 1;
+
+    addStudentBtn.addEventListener('click', () => {
+      const row = document.createElement('tr');
+      row.classList.add('highlight');
+      
+      row.innerHTML = `
+        <td>${studentId}</td>
+        <td>John Doe</td>
+        <td>18</td>
+        <td>A</td>
+      `;
+      studentTable.appendChild(row);
+
+      // Remove highlight after 2 seconds
+      setTimeout(() => row.classList.remove('highlight'), 2000);
+
+      studentId++;
+    });
+
+    const fonts = [
+      'Roboto', 
+      'Lato', 
+      'Open Sans', 
+      'Montserrat', 
+      'Poppins', 
+      'Raleway', 
+      'Nunito', 
+      'Merriweather', 
+      'Oswald', 
+      'Playfair Display'
+    ];
+
+    // Change Font Button Functionality
+    const changeFontBtn = document.getElementById('change-font-btn');
+
+    changeFontBtn.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * fonts.length); // Generate a random index
+      const fontFamily = fonts[randomIndex];
+
+      const link = document.createElement('link');
+      link.href = `https://fonts.googleapis.com/css2?family=${fontFamily.replace(' ', '+')}&display=swap`; // Replace space with '+'
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+
+      document.querySelector('table').style.fontFamily = `'${fontFamily}', sans-serif`;
+    });
+
+    // Display Browser Information
+    const browserInfoDiv = document.getElementById('browser-info');
+
+    const updateBrowserInfo = () => {
+      const browserInfo = `
+        <strong>Browser Name:</strong> ${navigator.appName}<br>
+        <strong>Browser Version:</strong> ${navigator.appVersion}<br>
+        <strong>Window Dimensions:</strong> ${window.innerWidth} x ${window.innerHeight}<br>
+        <strong>User Agent:</strong> ${navigator.userAgent}
+      `;
+      browserInfoDiv.innerHTML = browserInfo;
+    };
+
+    updateBrowserInfo();
+
+    // Update window dimensions on resize
+    window.addEventListener('resize', updateBrowserInfo);
+  </script>
+</body>
+</html>

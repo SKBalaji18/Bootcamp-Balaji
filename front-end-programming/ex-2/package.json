@@ -1,0 +1,23 @@
+{
+  "name": "ex-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/papaparse": "^5.3.15",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.3"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "ts-node": "^10.9.2"
+  }
+}

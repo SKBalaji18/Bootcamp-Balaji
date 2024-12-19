@@ -1,0 +1,33 @@
+/* src/styles.scss */
+
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+
+body {
+  background-color: $primary-color;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.button {
+  background-color: $secondary-color;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+}
+
+.button:hover {
+  background-color: darken($secondary-color, 10%);
+}
+
+@mixin generate-margins($max) {
+    @for $i from 1 through $max {
+      .m-#{$i} {
+        margin: $i * 2px;
+      }
+    }
+  }
+  
+  @include generate-margins(8);
