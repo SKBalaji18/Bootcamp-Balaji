@@ -56,9 +56,11 @@ function renderCards() {
   const start = (currentPage - 1) * cardsPerPage;
   const end = start + cardsPerPage;
 
+
   displayedPapers.slice(start, end).forEach((paper) => {
     const card = document.createElement('div');
     card.className = 'card';
+    const truncatedAbstract = paper.abstract ? paper.abstract.slice(0, 150) + '...' : 'N/A';
     card.innerHTML = `
       <h2>${paper.title}</h2>
       <hr>
@@ -68,9 +70,25 @@ function renderCards() {
           <div><strong>Venue:</strong> ${paper.venue || 'N/A'}</div>
           <div><strong>Citations:</strong> ${paper.n_citation || '0'}</div>
       </div>
-      <p><strong>Abstract:</strong> ${paper.abstract ? paper.abstract.slice(0, 150)+`...,` : 'N/A'}</p>
-      ${paper.abstract && `<a href="#">Read more</a>`}
+      <p><strong>Abstract:</strong> <span class="abstract-text">${truncatedAbstract}</span></p>
+      <button href="#" class="read-more">Read more</button>
     `;
+
+    const readMoreButton = card.querySelector('.read-more');
+    const abstractText = card.querySelector('.abstract-text');
+
+    // Toggle abstract visibility on "Read more" click
+    readMoreButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (abstractText.textContent.endsWith('...')) {
+        abstractText.textContent = paper.abstract; // Show full abstract
+        readMoreButton.textContent = 'Read less'; // Change text to 'Read less'
+      } else {
+        abstractText.textContent = truncatedAbstract; // Truncate abstract again
+        readMoreButton.textContent = 'Read more'; // Change text to 'Read more'
+      }
+    });
+
     cardsContainer.appendChild(card);
   });
 
@@ -176,7 +194,7 @@ function exportFilteredData(filteredData) {
   
   // Convert filtered data to CSV format
   const csvContent = filteredData.map(paper => 
-    `${paper.id},${paper.title},${paper.authors.join(';')},${paper.year},${paper.venue},${paper.n_citation},${paper.abstract}`
+    `${paper.id},${paper.title},${paper.authors},${paper.year},${paper.venue},${paper.n_citation},${paper.abstract}`
   ).join('\n');
   
   // Add the CSV content to the zip file

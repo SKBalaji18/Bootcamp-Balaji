@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Document: Static Amazon-like Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        ol {
+            list-style-type: decimal;
+            margin-left: 20px;
+        }
+        p {
+            margin: 10px 0;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Design Document: Building a Static Amazon-like Website</h1>
+        </header>
+
+        <section>
+            <h2>Objective</h2>
+            <p>To design and implement a static e-commerce website inspired by platforms like Amazon or Flipkart, hosted on a static hosting service (e.g., Netlify or Cloudflare Pages). The website will feature dynamic catalog generation, client-side search, and optimized performance for large-scale catalogs, while excluding in-scope functionalities like purchasing and inventory tracking.</p>
+        </section>
+
+        <section>
+            <h2>Rationale</h2>
+            <ul>
+                <li><strong>Cost-efficiency:</strong> Free or low-cost hosting on platforms like Netlify and Cloudflare.</li>
+                <li><strong>Performance:</strong> High-speed page loads due to pre-rendered content served via a global CDN.</li>
+                <li><strong>Security:</strong> Elimination of dynamic server-side code minimizes vulnerabilities.</li>
+            </ul>
+            <p>By combining SSG with modern client-side techniques, we can achieve a balance between functionality and scalability, making it viable for an e-commerce catalog.</p>
+        </section>
+
+        <section>
+            <h2>Key Features</h2>
+            <article>
+                <h3>1. Static Site Generation</h3>
+                <ul>
+                    <li>Use <strong>Hugo</strong> for its speed in handling large-scale content.</li>
+                    <li>Fetch product data from a database (e.g., JSON export from an RDBMS or NoSQL database) during build time.</li>
+                    <li>Generate static HTML pages for each category and product based on the database.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>2. Client-Side Search</h3>
+                <ul>
+                    <li>Implement full-text search using <strong>Lunr.js</strong> or <strong>FlexSearch</strong>:</li>
+                    <ul>
+                        <li>Support for stemming, typo tolerance, and proximity searches.</li>
+                        <li>Build the search index during SSG and load it on the client for real-time searching.</li>
+                    </ul>
+                    <li>Optimize index size by limiting searchable fields (e.g., title, category, and key attributes).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>3. Pagination and Lazy Loading</h3>
+                <ul>
+                    <li>Paginate product listings to avoid overwhelming the browser with large datasets.</li>
+                    <li>Lazy-load images using libraries like <strong>lazysizes.js</strong> to enhance performance.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>4. Filters and Sorting</h3>
+                <ul>
+                    <li>Dynamic filters (e.g., price ranges, categories) implemented via JavaScript.</li>
+                    <li>Client-side sorting (e.g., by price or rating).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>5. Responsive Design</h3>
+                <ul>
+                    <li>Create a mobile-first design using modern CSS frameworks or custom CSS.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Capacity and Performance Considerations</h2>
+            <article>
+                <h3>Catalog Size</h3>
+                <p>Practical browser support suggests a catalog limit of ~50,000 items for smooth performance. Larger catalogs can be segmented into categories, reducing the number of items loaded into memory at once.</p>
+            </article>
+
+            <article>
+                <h3>Search Optimization</h3>
+                <ul>
+                    <li>Compress the search index using gzip during deployment.</li>
+                    <li>Offload non-critical attributes (e.g., long descriptions) from the search index.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Image Optimization</h3>
+                <ul>
+                    <li>Use responsive images with modern formats (e.g., WebP).</li>
+                    <li>Pre-generate multiple resolutions of each image during the build process.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section>
+            <h2>Prototype Implementation Plan</h2>
+            <article>
+                <h3>Steps</h3>
+                <ol>
+                    <li>Data Preparation: Create a sample JSON file with 100 products.</li>
+                    <li>Pagination: Implement pagination logic in JavaScript and use lazysizes.js for images.</li>
+                    <li>Design: Build a responsive layout using custom CSS.</li>
+                    <li>Deployment: Host on Netlify and test with simulated high traffic.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section>
+            <h2>Reduced Functionality and Trade-offs</h2>
+            <ul>
+                <li>No live inventory tracking.</li>
+                <li>No server-side logic for personalized recommendations.</li>
+                <li>Search capabilities are constrained to client-side performance.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Deliverables</h2>
+            <ul>
+                <li>A prototype hosted on Netlify.</li>
+                <li>Code repository with the following:</li>
+                <ul>
+                    <li>Sample JSON data.</li>
+                    <li>JavaScript for search, filters, and pagination.</li>
+                    <li>Custom CSS for design.</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>While this static approach cannot match the full dynamic capabilities of a server-based e-commerce site, it provides a scalable, cost-effective alternative for catalog presentation. With thoughtful optimizations and reduced functionality, it demonstrates the potential of modern SSG techniques to handle medium-scale e-commerce requirements.</p>
+        </section>
+    </div>
+</body>
+</html>

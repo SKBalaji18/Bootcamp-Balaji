@@ -241,15 +241,19 @@ hr {
   color: #7f8c8d;
 }
 
-.card a {
+.read-more {
   display: inline-block;
+  background-color: transparent;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
   margin-top: 8px;
   color: #e74c3c;
   text-decoration: none;
   font-weight: bold;
 }
 
-.card a:hover {
+.read-more:hover {
   text-decoration: underline;
   color: #c0392b;
 }
