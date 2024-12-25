@@ -8,7 +8,11 @@ const HomePage = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     const inputCity = event.target.city.value.trim();
-    if (inputCity) setCity(inputCity);
+    if (inputCity) {
+      setCity(inputCity);
+    } else {
+      alert("Please enter a city name.");
+    }
   };
 
   return (
@@ -18,18 +22,18 @@ const HomePage = () => {
         <h1 className="text-3xl font-bold">Welcome to City Weather</h1>
         <p className="text-lg">Get the latest weather updates for your city.</p>
       </header>
-      <main className="mt-6">
+      <main className="mt-6 w-full px-4">
         <CityWeather city={city} />
-        <form className="mt-4" onSubmit={handleSubmit}>
+        <form className="mt-4 flex justify-center" onSubmit={handleSubmit}>
           <input
             type="text"
             name="city"
             placeholder="Enter city"
-            className="border rounded-md px-4 py-2"
+            className="border rounded-md px-4 py-2 w-60"
           />
           <button
             type="submit"
-            className="ml-2 px-4 py-2 bg-blue-600 text-white rounded-md"
+            className="ml-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
           >
             Update Weather
           </button>
