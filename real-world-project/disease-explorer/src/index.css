@@ -201,8 +201,8 @@ body {
 .tree-node-content {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem;
+  gap: 0.5rem; 
+  padding: 0.5rem; 
   border-radius: 8px;
   transition: background-color 0.2s ease;
 }

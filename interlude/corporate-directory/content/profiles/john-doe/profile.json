@@ -1,0 +1,9 @@
+{
+    "name": "John Doe",
+    "email": "john.doe@clientcompany1.com",
+    "contactDetails": {
+      "phone": "+1 234 567 8900",
+      "linkedin": "https://linkedin.com/in/johndoe",
+      "github": "https://github.com/johndoe"
+    }
+  }
